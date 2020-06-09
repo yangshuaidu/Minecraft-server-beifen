@@ -1,0 +1,700 @@
+###########################################
+#                                         #
+#      MainMC Reloaded by Nothing00       #
+#                                         #
+###########################################
+
+#Permissions:
+# main.reload - 重新加载插件配置的权限。
+# main.mainmc - 显示帮助命令的权限
+# main.gamemode - 更改游戏模式的权限。
+# main.gamemode.other -  更改为其他玩家的游戏模式权限。
+# main.give - 给于物品的权限。
+# main.vanish -隐形权限
+# main.vanish.other - 设置其他玩家隐形/显性权限。
+# main.enchant - 手中附魔项目的许可。
+# main.enchant.other -  在目标玩家手中附魔的权限。
+# main.kick - 踢出玩家的权限。
+# main.xp - 使用XP命令的权限。
+# main.xp.show - 显示玩家经验的权限。
+# main.xp.set - 设置玩家XP经验的权限。
+# main.xp.give - 允许向玩家提供XP经验的权限。
+# main.feed - 使用回复饥饿命令的权限。
+# main.feed.other - 回复其他玩家饱食度的权限.
+# main.heal - 使用治疗命令的权限。
+# main.heal.other - 在其他玩家上使用治疗命令的权限。
+# main.god - 打开/关闭神模式的权限。
+# main.god.other - 在其他玩家上激活/禁神模式的权限。
+# main.hat - 将你手中的方块设置为帽子的权限。
+# main.hat.other - 允许在你的手中物品作为其他玩家的帽子。
+# main.fly - 打开/关闭飞行模式的权限
+# main.fly.other - 在其他玩家上切换开/关飞行模式的权限。
+# main.speed - 允许在所有世界中更改速度。
+# main.time - 允许在所有世界中更改时间。
+# main.weather - 改变所有世界天气的许可。
+# main.repair - 使用修复命令的权限。
+# main.repair.hand - 修复手中物品的权限。
+# main.repair.all - 修理所有物品的权限.
+# main.workbench - 打开工作台界面.
+# main.me - 使用/me命令的权限。
+# main.clear - 清除背包所有物品的权限。
+# main.clear.other - 清除其他玩家所有物品的权限。
+# main.tp - 传送给其他玩家的权限。
+# main.tp.other - 将玩家传送给其他玩家的权限
+# main.tphere - 允许其他玩家传送给你的权限。
+# main.invsee -  查看其他玩家的背包的权限。
+# main.invsee.interact - 打开其他玩家的背包并顺走东西的权限.
+# main.enderchest - 使用指令打开末影箱.
+# main.enderchest.other - 打开其他玩家的末影箱.
+# main.enderchest.other.interact - 打开其他玩家的末影箱并顺走东西.
+# main.broadcast - 使用公告的权限节点.[OP]
+# main.kickall - 让玩家飞出去的权限节点.[OP]
+# main.kill - 使用kill调戏玩家的权限节点.[OP]
+# main.tpall - 部署大传送阵的权限节点.[OP]               就是把所有玩家都tp过来而已
+# main.tpall.other - 把所有玩家都tp到另外一个玩家那里去的权限节点.[OP]
+# main.tppos - tp目标点是坐标的权限节点.[OP]
+# main.tppos.other - 把一个玩家tp到一个特定坐标.[OP]
+# main.tptoggle - 接受tp到你这里来的权限节点.[OP]        不不这个是tp的接受于否 tpa在下面
+# main.tptoggle.other - 接受其他玩家让你tp过去的请求.[OP]
+# main.getpos - 获取你的坐标的权限节点.[Default]
+# main.getpos.other - 看别人坐标的权限节点.[OP]
+# main.spawner - 改变刷怪笼内东西的权限节点.[OP]
+# main.thor - 降 下 天 罚, 霹 一 道 雷 下 来 而 已.[OP]
+# main.list - 显示在线玩家的权限节点.[Default]
+# main.list.viewall - 显示所有在线玩家的权限节点 (包括处于完全隐身模式的).[OP]
+# main.afk - 输入 /afk 挂机的权限节点.[Default]
+# main.afk.other - 让别人进入挂机状态的权限节点.[OP]
+# main.afk.bypasskick - 不会因为挂机状态过久而被飞出去的权限节点.[OP/VIP/Suppoerter]
+# main.helpstaff - 使用 /helpstaff 的权限节点.[Default]
+# main.helpstaff.receive - 允许查看发送给OP请求帮助的消息.[OP]
+# main.msg - 允许发送私聊信息.[Default]
+# main.reply - 允许回复私聊消息.[Default]
+# main.back - 允许使用/back的权限节点.[Default]
+# main.tpa - 可以使用/tpa的权限节点.[Default]
+# main.tpahere - 允许使用/tpahere的权限节点.[Default]
+# main.tpaccept - 接受tpa请求.[Default]
+# main.tpdeny - 拒绝tpa请求.[Default]
+# main.setspawn - 设置玩家出生点.[OP]
+# main.spawn - 使用 /spawn 的权限节点.[Default]
+# main.warps - warp下所有权限的通配符.[OP]
+# main.warp.list - 看warp列表的权限节点.[Default]
+# main.warp - 使用 /warp的权限节点.[Default]
+# main.setwarp - 设置warp的权限.
+# main.delwarp - 删除warp的权限.
+# main.back.bypassdelay - 无视设置的 back 延迟.
+# main.spawn.bypassdelay - 无视设置的 spawn 延迟.
+# main.warps.bypassdelay - 无视设置的 warp 延迟.
+# main.kit - 可以使用kit.
+# main.kits - 可以显示kit的列表.
+# main.kits.bypassdelay - 无视kit冷却.
+# main.kits.other - 给其他玩家礼包的权限.
+# main.kit.<name> - 获得单个礼包的权限.
+# main.nick - 修改nick.
+# main.nick.color - 在nick里使用&颜色符的权限节点.
+# main.nick.format - 使用nick格式.
+# main.nick.magic - 可以在nick里使用 变色颜色符&k.
+# main.nick.other - 为其他玩家设置自定义昵称的权限.
+# main.realname - 使用/realname的权限节点.
+# main.heal.bypassdelay - 无视heal延迟的权限.
+# main.feed.bypassdelay - 无视feed延迟的权限.
+# main.ignore.bypassignore - 无视玩家的权限.
+# main.ignore - 无视权限的通配符.
+# main.ignore.other - 强制让一个玩家无视另一个玩家.
+# main.ignores - 显示无视的玩家列表.
+# main.ignores.other - 显示其他玩家无视的玩家列表.
+# main.socialspy - 使用 /socialspy 的权限.
+# main.socialspy.other - 设置其他玩家完全隐身的权限.
+# main.mail - 使用 /mail 向玩家邮箱发信的权限.
+# main.mail.send - 发送mail的权限.
+# main.mail.read - 阅读mail的权限.
+# main.mail.clear - 删除mail的权限.
+# main.spymail - 发送无署名mail的权限.
+# main.spymail.read - 读其他玩家信箱里mail的权限.
+# main.spymail.clear - 删其他玩家mail的权限.
+# main.spymail.clearindex - 删其他玩家信箱里无署名mail的权限.
+# main.motd - 看服务器motd的权限.
+# main.silentjoin - 加入服务器不显示加入提示的权限节点.
+# main.silentjoin.vanish - 加入服务器时完全隐形的权限节点.
+# main.silentquit - 离开服务器不显示离开提示的权限节点.
+# main.untouchable - 让某玩家不能被kick, bans或者mutes...等等
+# main.home - home.*权限的通配符.
+# main.sethome - 用/home设置家的权限节点.
+# main.sethome.vip - VIP组设置/home的权限节点(在本文件下方可配置vip可设置家的数量)
+# main.sethome.staff - staff组设置/home的权限节点 (在本文件下方可配置staff可设置家的数量)
+# main.delhome - 删除家的权限节点.
+# main.delhome.other - 删除其他玩家的家的权限节点.
+# main.home.other - 查看其他玩家所有家数量及其位置的权限节点.
+# main.adminhome - 查看管理员的家的数量及其坐标的权限节点.
+# main.adminhome.teleport - 传送到其他玩家家的位置.
+# main.adminhome.set - 给其他玩家设置家的权限节点.
+# main.mute - 禁言某玩家的权限.
+# main.tempmute - 暂时禁言某玩家的权限.
+# main.unmute - 解除玩家禁言的权限.
+# main.chat - 在对话栏说话的权限.
+# main.chat.color - 在对话中使用&颜色符号的权限.
+# main.chat.format - 使用聊天格式(格式是什么?在下面的配置文件config里有).
+# main.chat.magic - 使用变色颜色符号 &k 的权限.
+# main.sign - 关于牌子的全部通配符.
+# main.sign.color - 在牌子内使用颜色符号的权限.
+# main.sign.format - 使用牌子格式的权限.
+# main.sign.magic - 仍然是变色颜色符号 &k .
+# main.sign.disposal.create - 创建一个垃圾桶牌子的权限.
+# main.sign.time.create - 创建一个修改时间牌子的权限.
+# main.sign.weather.create - 创建一个修改天气牌子的权限.
+# main.sign.enchant.create - 创建可以用牌子附魔的牌子的权限.(对不起,老娘汉化的太拗口了)
+# main.sign.warp.create - 创建一个传送warp点的牌子的权限.
+# main.sign.kit.create - 创建一个kit领取牌子的权限.
+# main.sign.heal.create - 创建一个heal治疗牌子的权限.
+# main.sign.repair.create - 创建一个修理手中物品牌子的权限.
+# main.sign.gamemode.create - 创建一个改变游戏模式gamemode的牌子的权限.
+# main.sign.free.create - 创建一个免费出售牌子的权限.
+# main.sign.buy.create  创建一个收购物品的牌子商店的权限.
+# main.sign.balance.create - 创建一个显示玩家金钱的牌子的权限.
+# main.sign.sell.create - 创建一个出售物品牌子的权限.
+# main.sign.disposal.use - 使用垃圾桶牌子的权限.
+# main.sign.time.use - 使用修改时间的牌子的权限.
+# main.sign.weather.use - 使用修改天气的牌子的权限.
+# main.sign.enchant.use - 使用附魔手中物品的牌子的权限.
+# main.sign.warp.use - 使用传送至某warp点的牌子的权限.
+# main.sign.kit.use - 使用牌子领取kit的权限.
+# main.sign.heal.use - 使用牌子来heal治疗自己的权限.
+# main.sign.repair.use - 使用牌子修理手上物品的牌子的权限.(拗口*2)
+# main.sign.gamemode.use - 使用gamemode牌子的权限.
+# main.sign.free.use - 使用免费出售牌子的权限.
+# main.sign.buy.use -(原配置文件里这里少个-可还行) 使用牌子购买物品的权限.
+# main.sign.balance.use - 使用显示金币牌子的权限.
+# main.sign.sell.use - 使用出售物品的牌子的权限.
+# main.build - 建造(破坏)的通配符.
+# main.build.use - 和方块交互的权限.
+# main.build.place - 放方块的权限.
+# main.build.break - 破坏方块的权限.
+# main.build.use.bypass - 无视不可交互方块黑名单的权限(黑名单在config下面).
+# main.build.place.bypass - 无视不可放置方块黑名单的权限(黑名单在config下面).
+# main.build.break.bypass - 无视不可破坏方块黑名单的权限(黑名单在config下面)/
+# main.world - 传送至世界的权限.
+# main.world.other - 把其他玩家传送至某世界的权限.
+# main.jail - jail监狱的通配符.
+# main.jail.create - 创建一个jail的权限.
+# main.jail.delete - 删除一个jail的权限.
+# main.jails - 显示jail监狱里关了什么东西的权限.
+# main.unjail - 把某玩家从监狱里丢出来的权限.
+# main.lookup - Permission to see lookup about a player.
+# main.banip - 可以使用/banip的权限.
+# main.unbanip - 可以使用/unbanip的权限.
+# main.tempban - 暂时ban一个玩家的权限.
+# main.ban - 使用/ban来ban掉ID的权限.
+# main.unban - 使用/unban来解ban的权限.
+# main.seen - 看各IP有多少玩家在使用.
+# main.bypasscommands - 无视黑名单指令的权限.
+# main.balance - 可以看自己有多少钱的权限.
+# main.balance.other - 看其他玩家多有钱的权限.
+# main.eco - eco通配符.
+# main.eco.give - 不是转账,是让console给一个玩家钱的权限.
+# main.eco.set - 直接设置某玩家的钱的权限.
+# main.eco.take -移除某玩家一定金币的权限.
+# main.pay - 转账给其他玩家的权限.
+# main.firstlogin - 让一个玩家在第一次加入游戏时拥有可使用的权限的权限.[好像是按原文翻译的太拗口了吧]
+#     那就重新翻一遍 本权限会在第一次加入时被添加然后退出时移除,拥有本权限的玩家在加入时会有新人欢迎提示(config里可以改),也会获得kit(config里可以改)
+# main.vanish.pvp - 在PVP状态下仍然可以保持完全隐形的权限.
+# main.god.pvp - 在PVP状态下仍然可以保持上帝模式的权限.
+# main.kits.creator - 可以在游戏内创建kit的权限.
+# main.book - 可以使用 /book 指令的权限.
+# main.book.other - 给其他玩家一本特定的书的权限.[书可以在下面config里添加和修改]
+# main.skull - 使用 /skull 的权限节点
+# main.skull.other - 允许/skull的选择器是其他玩家的权限节点
+# main.ping - 使用 /ping 的权限
+# main.ping.other - 看别人的ping
+# main.lastlocation.other - 看别人上次在哪里下线的
+# main.lastlocation - 查看你上次下线时在哪里
+# main.ptime - 看自己在线了多久
+# main.ptime.other - 可以看其他玩家在线时间的权限节点
+# main.bypasscombat - 无视战斗模式的权限节点
+# main.item.command - 给物品绑定指令的权限
+# main.burn - 点燃其他玩家
+# main.ext - 扑灭自己身上的火
+# main.ext.other - 给其他玩家
+# main.nightvision - 使用 /nv 开启夜视
+# main.nightvision.other - 给其他玩家开启/关闭夜视
+# main.near - 查看自己附近的玩家[OP/VIP/Suppoerter]
+# main.near.other - 可以看其他玩家附近的玩家[OP/Suppoerter/VIP]
+# main.withdraw - 取钱[ALL]
+# main.withdraw.get - 可以检查自己的钱[ALL]
+# main.fireball - 发射香喷喷的(误)火球[OP]
+# main.warps.gui - 用GUI修改warp的权限[OP]
+
+###########################################
+#                                         #
+#                插件配置                  #
+#                                         #
+###########################################
+
+# 修改SQLite库下database.db的名字
+# 可以在本插件根目录下找到 /data/folder 文件夹,下面可以设置database.db的名称,方便去找.
+database-name: 'database'
+
+#OP的名字颜色 前面不需要加&
+ops-color-name: 'c'
+
+#玩家如果有nick的话 前面就会显示这个 汉化的时候我是直接删了 
+nickname-prefix: '~'
+
+# nick最长长度.
+nickname-length: 20
+
+# 默认自带的权限, 可以在这里添加玩家默认拥有的权限
+# 如果你用了PermissionSex或者PermissionSplus权限组插件，请在下面设置为true
+use-permissions: false
+# 添加不带“main”的权限名以添加默认权限
+#玩家默认权限
+user-permissions:
+- afk
+- back
+- balance
+- baltop
+- balance.other
+- build
+- build.use
+- build.place
+- build.break
+- clear
+- sethome
+- home
+- delhome
+- chat
+- help
+- helpstaff
+- ignore
+- kit
+- kit.tools
+- list
+- mail
+- mail.send
+- mail.read
+- mail.clear
+- me
+- motd
+- msg
+- pay
+- realname
+- sign
+- sign.use
+- sign.use.balance
+- sign.use.buy
+- sign.use.disposal
+- sign.use.enchant
+- sign.use.free
+- sign.use.gamemode
+- sign.use.heal
+- sign.use.kit
+- sign.use.repair
+- sign.use.sell
+- sign.use.time
+- sign.use.warp
+- spawn
+- suicide
+- ptime
+- tpa
+- tpaccept
+- tpahere
+- tpdeny
+- warp
+- warps
+- orecrops.limit.default
+- orecrops.limit.admin
+# 传送后的无敌时间
+teleport-safety:
+  enabled: true
+  duration: 30
+
+# 加入游戏后多少时间内无法被攻击
+login-attack-delay: 100
+
+# 针对不同的传送情况设置一定的延迟
+Teleport:
+ tpa-expire-time: 190
+ warp-delay: false
+ warp-delay-time: 10
+ spawn-delay: false
+ spawn-delay-time: 30
+ back-delay: false
+ back-delay-time: 30
+
+
+# 使用/heal或/feed的延迟.
+Heal:
+ enabled-delay: false
+ heal-delay: 60 
+ feed-delay: 60
+
+# 禁止开启上帝模式的世界.
+no-god-in-worlds:
+- example_the_end
+- example_nether
+
+# 当玩家离开游戏时自动关闭他的上帝模式
+god-disable-quit: false
+
+# 玩家邮箱要是满了的话就会收不到新邮件...
+not-send-full-mailbox: true
+mailboxlimit: 10 
+ 
+# 绕过默认的每个装备上附魔的最大级别检查
+enchantments:
+ bypassmaxlevel: false
+ # 可以用 /reapir 修理附魔装备
+repair-enchanted: true
+
+# 如果你把这个设置为true的话 必须为玩家添加 main.warp.<名字> 的权限
+per-warp-permission: false
+
+AFK:
+ AutoAFK: false
+ # 面设置为true的话 玩家会在<time>后自动进入挂机(AFK)模式
+ time: 190
+ AutoKick: false
+ # 上面设置为true的话,玩家一进AFK模式就会被飞出去
+ Kick-time: 190
+ Kick-Message: '&cYou are been kicked for AFK'
+# 下面设置为true时,当玩家移动时,会自动把玩家从AFK状态中移除
+# 无论怎么设置，在说话/使用命令时，玩家都会离开AFK挂机状态.
+cancel-afk-on-move: true
+# 如果你想让玩家在AKF挂机状态时无法通过移动来解除的话，设置为true.
+# 若设置为true的话,只是建议将上面的cancel-afk-on-move设置为false.
+freeze-afk-players: false
+ 
+# 设置为true来显示游戏内的死亡提示,那么false就是不显示啦www
+death-messages: true
+
+# 如果玩家拥有main.selentjoin和main.selntquit权限时
+# 服务器将不会显示他们进入游戏或退出游戏的提示
+# 如果拥有main.selentjoin.winze权限的话,玩家会在加入游戏时自动完全隐身
+allow-silent-join-quit: false
+
+# 可以在此处自定义加入游戏的消息，设置为“none”的话就不会有提示了.
+# 支持颜色代码的，占位符{player}会显示玩家的ID,而占位符{displayname}会显示玩家的nick.
+custom-join-message: "none"
+ 
+# 可以在此处自定义离开游戏的消息，设置为“none”的话就不会有提示了.
+# 支持颜色代码的，占位符{player}会显示玩家的ID,而占位符{displayname}会显示玩家的nick.
+custom-quit-message: "none"
+
+
+# 允许玩家设置一堆home
+# 如果玩家有main.sethome权限,是以dafault来算的.
+# main.sethome.vip或main.sethome.staff两个权限节点可以让玩家设置更多的home.
+sethome:
+  default: 50
+  vip: 100
+  staff: 999
+
+# 下面设置为true时,玩家死亡后会在home处复活，而不是在主城或者别的什么spawn点.
+spawn-at-home-on-death: false  
+  
+# 是代替了tplogin插件的效果,让玩家在登录时传送至主城(设置的spawn点),而不是下线地点
+spawn-TP: false
+  
+# 那个，如果想弄一个指令牌子的话，把前面的 # 去掉就行了
+# 不动的话就是禁用状态的说
+
+enabledSigns:
+  #- color
+  #- balance
+  #- buy
+  #- sell
+  #- free
+  #- disposal
+  #- warp
+  #- kit
+  #- enchant
+  #- gamemode
+  #- heal
+  #- repair
+  #- time
+  #- weather  
+
+# 在使用 /warp 或 /warps 时打开gui
+warp-Gui:
+ enabled: true
+ locked-label: '&c已锁定'
+ admin-teleport: '&传送就绪'
+ change-icon: '&e材质已修改'
+ show-warp: '&b显示Gui内的warp点'
+ hide-warp: '&隐藏Gui内的warp点'
+  
+# 在使用 /kit 或 /kits 时打开gui
+kit-Gui: 
+ enabled: true
+ preview-label: '&b右键以查看礼包内容'
+ locked-preview-label: '&b点击以预览'
+ get-lable: '&左键领取礼包'
+ locked-label: '&c莫得礼包'
+ 
+
+# 当你攻击一个玩家时会进入combatlog战斗模式。
+# 在战斗模式中，你不能使用命令或飞行， 如 果 你 退 出 的 话 会 立 即 暴 毙。
+CombatMode:
+ enable: false
+ exit-delay: 60
+ enter-message: '&9Combat> &e{player} &7和你都进入了战斗模式!'
+ sender-message: '&9Combat> &7你目前还在战斗模式中,请不要退出游戏!'
+ exit-message: '&9Combat> &7脱离战斗.'
+  
+###########################################
+#                                         #
+#           用书来介绍kits/服务器           #
+#                                         #
+###########################################
+
+# this section allows you to create personalized 
+# books and to show them in the kits with the tag book: name
+Books:
+ test:
+  author: ？？？
+  title: '&4&l欢迎来到萌酱的世界' 
+  # each line represents a page, if you want to wrap with the text use /d
+  pages:
+   - '这部分还没搞好，敬请期待！！！'
+#  - 'this is a test line for give you an example of this book /dThis is a second line in my first page'
+#  - 'Page2: Welcome in MainMC! This features was asked to me by a FAN /d what do you think about?'
+#  - 'Page3: If you have bugs contact me! ;) /dline1 /dline2 /dline3 /dline4 /d&9c&ci&3a&5o'
+# test2:
+#  author: Notch
+#  title: 'A Minecraft''s story'  
+#  pages:
+#  - 'Sorry but I''m not Notch so i do not know to write :P'
+  
+###########################################
+#                                         #
+#                 惩罚记录                 #
+#                                         #
+###########################################  
+
+# 如果为true，则创建一个文件，其中保存所有惩罚数据
+# save time, date, sender, victim, ecc...
+create-file-history: false
+divide-per-file: false 
+
+# set defualt motivation for punishment
+Kick:
+ Motivation: '&cBreaking rules'
+Mute:
+ Motivation: '&cIncorrect language'
+Ban:
+ Motivation: '&cserious breach of the rules'
+
+# set command that player can be run in jail
+jail-whitelist-commands:
+- /login
+- /register
+- /unlockaccount
+ 
+###########################################
+#                                         #
+#          Economy configuration          #
+#                                         #
+########################################### 
+
+
+# if you have conflicts with others plugins set this to true
+# all MainMC economy system (included addon) will be disabled!
+disable-economy: false
+
+# if you want to use Vault economy add MainMC-Economy addon and set this to true
+# if this is set to false MainMC will use its internal economy system.
+addon:
+ enabled: false
+ use-gui: true
+ give: '&eGive Money'
+ take: '&eTake Money'
+ set: '&eSet Balance'
+ add: '&2+{amount}'
+ remove: '&4-{amount}'
+ close: '&cClose'
+ save: '&a&lSave'
+ top5: '&3View Top 5'
+ top10: '&3View Top 10'
+ top20: '&3View Top 20'
+ top1: '&aTop 1'
+ top2: '&bTop 2'
+ top3: '&eTop 3'
+
+# set starting bilance
+balance: 10.0
+# set format of valuta
+valuta-format: '$'
+ 
+
+
+###########################################
+#                                         #
+#           Chat configuration            #
+#                                         #
+###########################################  
+
+use-chat-format: true
+# modify default format message in chat, user this varibale {displayname} or {player}
+format: '<{prefix}{displayname}{suffix}> &r'
+
+# if use PermissionsPlus plugin set a chat-format per group 
+Groups: {} # delete {} if you want to unlock groups
+# default: '{prefix}{displayname}{suffix}&7: '
+# admin: '{prefix}{displayname}{suffix}&7: &c'
+
+# set your custom announcement in broadcast to the server
+Announcement:
+ enable: true
+ delay: 120
+ messages:
+  1:
+  - '&7&m==================================================='
+  - ''
+  - '&3                  欢迎来到萌酱的世界!'
+  - '&e                  QQ群:731675387,群主即腐竹'
+  - '&3                  群主ID：NoCute' 
+  - ''
+  - '&7&m==================================================='
+  2: 
+  - '&7&m============================================================'
+  - ''
+  - '&3                  AsiaBSD研讨会和FreeBSD吧专属服务器'
+  - '&e                  各位要好好爱护哦'
+  - ''
+  - '&7&m============================================================'
+  3:
+  - '&7&m========================================'
+  - ''
+  - '&3                  萌萌酱是最可爱的'
+  - ''
+  - '&7&m========================================'
+    #  4:
+    # - '&7&m========================================'
+    # - ''
+    # - '&3           Get info to our warp!'
+    # - '&e                /warp info'
+    # - ''
+    # - '&7&m========================================'
+  
+# format message on player type /msg or /reply
+Message:
+ sent: '&8[&6me&7->&3%to%&8] &7%message%'
+ received: '&8[&3%from%&7->&6me&8] &7%message%'
+ spy: '&8[&3%from%&7->&b%to%&8] &7%message%'
+
+ 
+ 
+###########################################
+#                                         #
+#                方块交互保护              #
+#                                         #
+###########################################
+
+# 禁止交互
+non-usable-blocks:
+#- 116
+#- 145
+
+# 禁止破坏
+non-breakable-blocks:
+#- 7
+#- 49
+#- 138
+
+# 禁止放置
+non-placeable-blocks:
+#- 7
+#- 46
+
+###########################################
+#                                         #
+#               服务器隐私保护             # 
+#                                         #
+########################################### 
+
+# 是否混淆玩家名字
+# 比如把 Nothing00_ 显示为 nThIng00_
+case-sensitive-protection: false
+# set deny message for case sensitive protection
+case-sensitive-deny-message: '&7We prefer that you join with your original nickname: &e{player}'
+
+# set this true if you want to ask when player join a keyword to unlock his account when his IP is different than last
+# if it is true when you join with a different IP you must be unlock your account with /unlockaccount <keyword>
+lockaccount-protection: false
+
+# set keyword message on first join
+setlockaccount-message: '&9Account> &7We strongly advise you to protect your account with &e/setlockaccount <keyword>'
+# set keyword message on IP changed
+unlockaccount-message: '&9Account> &7You must unlock your account with &e/unlockaccount <keyword>'
+# on set keyword message
+set-keyword-message: '&9Account> &7Your keyword will  be &e{keyword}'
+# on change keyword message
+change-keyword-message: '&9Account> &7Your keyword was changed to &e{keyword}'
+# set message on unlocked
+unlocked-message: '&9Account> &7Succefully unlocked!'
+# set message on wrong unlock
+unlock-wrong-message: '&9Account> &7Wrong keyword!'
+# if lockaccount-protection is set to false set message to on unlock commands
+no-active-protect-message: '&9Account> &7This protection is not active! set &elockaccount-protection: true &7in &econfig.yml &7file!'
+
+# set command that player can run when is locked
+whitelist-locked-cmds:
+- /login
+- /register
+
+# if is set to true if a Player has the same IP of server address he will be dinied
+# NOT SET THIS TRUE IF YOU ARE THE HOST
+server-Player-IP-protection: false
+# set deny message for server Player-IP protection
+server-Player-IP-deny-message: '&cStrange, do you have the same server address? bye Bye'
+
+# set this true if you do not want that player can duplicate his UUID using online-mode bug
+# for example Nothing00_ = UUID1 but Nothing00_ = UUID2
+# if you enable this option you must be sure not to change the online-mode entry anymore, 
+# you should delete all user data, then configure this before using this plugin for users
+UUID-protection: false
+# set deny message for case sensitive protection
+UUID-deny-message: '&cYour UUID does not coincide with the data in our database!'
+
+# 黑名单指令 玩家将被禁止使用
+blacklist-commands:
+- /plugins
+- /pl
+- /bukkit:op
+- /bukkit:deop
+- /minecraft:me
+- /minecraft:?
+- /?
+- /bukkit:?
+- //calc
+- //calculate
+- /worldedit:/calc
+- /worldedit:/calculate
+- //eval
+- //evaluate
+- /worldedit:/eval
+- /worldedit:/evaluate
+- //solve
+- /worldedit:/solve
+
+# set message on doing blacklisted command
+blacklist-commands-message: '&r指令不存在. 输入 "/help"查看帮助.'
+
+# all username in this blacklist can't join in the server
+blacklist-usernames:
+- md_5
+- CONSOLE
+- list
+- all
+# set kick blacklist message
+blacklist-usernames-message: '&c抱歉，你的名字在k黑名单里！'
+
+###########################################
+#                                         #
+#        New Player configuration         #
+#                                         #
+###########################################  
+
+# set a custom message when new player join, usi {player} or {displayname}
+new-player-join-message: '&3&o欢迎 {player} 来到服务器'
+
+# give kit on join
+#first-kit: 'tools'

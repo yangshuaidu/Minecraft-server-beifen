@@ -1,0 +1,127 @@
+/MainMC 主命令
+/MainMC reload 重载插件
+/MainMC help 显示help部分(可在config内进行修改,也可以加上其他插件的指令)
+/MainMC findpl <指令> 显示某条指令出自哪个/哪些插件
+/gmc <玩家> 设置玩家为创造模式
+/gms <玩家> 设置玩家为生存模式
+/gma <玩家> 设置玩家为冒险模式
+/gm <0/1/2/3> <玩家> 修改玩家的游戏模式
+/vanish <玩家> 让某玩家完全隐形[包括盔甲等]
+/give <玩家> <物品ID> <数量> [enchant:等级] [name:显示的名称] 就是原版的give指令,但是多了半个Lore Edit的效果
+/item <物品ID> <数量> 另一种表达方式的give指令
+/enchant <enchant> <等级> 给手上的武器/物品附魔
+/kick <玩家> <原因> 踢出某玩家
+/kickall <原因> 杀死所有玩家
+/xp show <玩家> 显示某玩家的经验
+/xp give <玩家> <等级> 给某玩家一定经验
+/xp set <玩家> <等级> 把某玩家经验设置为
+/feed <玩家> 让某玩家回满饱食度
+/heal <玩家> 让某玩家回满血
+/god <玩家> 让某玩家变成上帝模式
+/hat <玩家> 让某玩家带绿帽子或者是手上的东西
+/fly <玩家> 开启某玩家手机(手机上帮我画一条横杠)的飞行模式
+/speed <walk/fly> <1-10> <玩家> 设置某玩家的飞行/走路速度
+/walkspeed <1-10> <玩家> 设置某玩家的走路速度
+/flyspeed <1-10> <玩家> 设置某玩家的飞行速度
+/day 切换白天
+/night 切换夜晚
+/sun 切换晴天
+/storm 切换大雨
+/thunder 切换雷暴
+/repair hand 修理手上的物品
+/repair all 修理背包内所有物品
+/workbench 打开工作台的GUI
+/me 这个不用多说?
+/clear <玩家> 清理某玩家的背包
+/tp <玩家> <目标玩家> 强制传送至某玩家
+/tphere <玩家> 强制把某玩家穿送过来
+/tpall <玩家> 把所有玩家全部传送到某玩家那里
+/tppos <x> <y> <z> <玩家> 把某玩家传送到某坐标
+/tptoggle <玩家> 打开/关闭某玩家的tp功能(也可以视作是否开启自动拒绝tp请求的功能)
+/invsee <玩家> 打开某玩家背包
+/endersee <玩家> 打开某玩家末影箱
+/broadcast 发送公告
+/kill <玩家> 杀死某玩家
+/suicide **
+/getpos <玩家> 显示某玩家坐标
+/spawner <mobtype> 修改刷怪笼种类
+/mobkill <mobtype/all> 杀死某世界上的一类生物
+/thor <玩家> 打雷
+/list 显示在线玩家
+/afk <玩家> <cause> 把某玩家设置为挂机AFK状态
+/helpstaff <message> 对在线的所有管理发送一封私聊的信(求救或举报没限制)
+/msg <玩家> <message> 私聊某玩家
+/reply <message> 回复某玩家的私聊
+/back 返回被服务器记录的前一个地点
+/tpa <玩家> 玩家可使用的传送请求指令
+/tpaccept 接受传送请求
+/tpdeny 拒绝传送请求
+/tpahere 请求某玩家传送过来
+/setspawn 设置出生点
+/spawn 返回出生点
+/setwarp <warp> 设置一个传送点
+/warp <warp> 前往某传送点
+/warps 显示所有传送点
+/delwarp 删除某传送点
+/kit <kit> <玩家> 给某玩家一个kit
+/kits 查看所有可领取的kit
+/nick <nickname/off> <玩家> 设置一个nick
+/realname <nickname> 查看某玩家被记录了UUID的ID
+/ignore <玩家> (<playertoignore>)  在聊天中屏蔽某玩家,如果填了<playertoignore>这个arg的话,就会变成让arg-2的玩家屏蔽arg-1的玩家 
+/ignores <玩家> 显示某玩家屏蔽的玩家
+/socialspy <玩家> 查看所有私聊信息
+/mail send <玩家> <message> 向玩家邮箱内发送一封信
+/mail read 读取信件
+/mail clear 清理邮箱
+/spymail 管理员使用,可以显示所有玩家的mail
+/motd 显示服务器motd
+/sethome <homename> 设置家
+/home <homename> 返回家
+/delhome <homename> 删除家
+/adminhome 显示管理员修改玩家的家的指令
+/mute <玩家> <原因> 禁言某玩家
+/unmute <玩家> 解除某玩家的禁言
+/tempmute <玩家> <分/小时> <原因> 暂时禁言某玩家
+/ban <玩家> <原因> 把某玩家ban了
+/unban <玩家> 解除某玩家的ban
+/unbanall 解除所有玩家的ban
+/tempban <玩家> <小时/天/年> <原因> ban某玩家一段时间
+/world <worldname> <玩家> 把某玩家传送到某世界
+/top <玩家> 把某玩家传送到某坐标
+/createjail <监狱名字> 在你的
+/jails 查看服务器内的所有监狱
+/deljail <监狱名字> 删除某监狱
+/jail <玩家> <监狱名字> 把玩家丢入某监狱
+/unjail <玩家> 把某玩家移出监狱
+/lookup <玩家> 检查玩家状态(即被ban 或禁言 或被屏蔽等)
+/banip <玩家/IP> <原因> ban掉某玩家的IP,会导致使用某ip的玩家全部被ban下去
+/unbanip <玩家/IP> 解除某IP的封禁
+/seen <玩家/IP> 查看和某玩家使用相同IP的账号,<arg-1>填IP的话则会显示所有使用该IP的账号
+/setlockaccount <密码> 为你的账号添加异地登陆的双重账户锁密码
+/unlockaccount <密码> 当某账号的登陆IP变化时会自动无法进行交互&移动,使用该指令来解锁你的账号
+/history <玩家> 查看某玩家的账号记录,即什么时候被ban过,被kick过,被禁言过
+/balance <玩家> 查看某玩家的金币
+/pay <玩家> <数量> 给某玩家转账
+/eco give <玩家> <数量> 让console给玩家一定数量的钱
+/eco take <玩家> <数量> 让console给移除某玩家一定数量的钱
+/eco set <玩家> <数量> 让console把玩家的钱设置为<arg-2>
+/firstlogin <玩家> 显示某玩家第一次加入游戏的时间.
+/kitcreator create <kit> 创建一个kit.
+/kitcreator setdelay <kit> <delay> 设置某kit的冷却时间.
+/kitcreator setalias <kit> <kit alias> 将一个kit设置为一个子类kit,位于<arg-1>的kit会继承子类的kit,类似于权限组,同样子类kit也能被领取或设置冷却.
+/kitcreator setcmd <kit> <command> 在领取kit时执行一段指令.
+/kitcreator delete <kit> 删除某kit.
+/book 显示服务器内的各种书(config可以很ez的改掉,可以用于介绍服务器或者是别的什么,书名和kit的名字如果相同的话,会出现在kit里)
+/book <book> 拿一本书出来
+/book <book> <玩家> 给某玩家一本特定的书
+/skull <owner> <玩家> 给某玩家一个<arg-1>的头
+/ping <玩家> 显示某玩家的ping
+/ptime <玩家> 显示某玩家在线时间
+/lastlocation <玩家> 显示某玩家下线地点
+/icadd <console/player> <command> 为手上的物品绑定指令,<arg-1>为console时无视权限组,为player时则会先判断用物品执行指令的玩家的权限组
+/burn <玩家> 点燃某玩家
+/ext <玩家> 清除某玩家身上的火
+/nightvision <玩家> 开启/关闭夜视
+/near <radius> <玩家> 显示附近的玩家
+/withdraw <数量> 从银行中提取金币
+/fireball 丢火球

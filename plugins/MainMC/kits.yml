@@ -1,0 +1,32 @@
+Kits:
+  test:
+    delay: 86400
+    helmet: diamond_helmet protection:1 name:&7Pro&6Helmet
+    chestplate: diamond_helmet protection:1 name:&7Pro&6Chestplate
+    leggings: diamond_leggings protection:1 name:&7Pro&6Leggings
+    boots: diamond_boots protection:1 name:&7Pro&6Boots
+    inventory:
+    - diamond_sword 1 sharpness:3 name:&7Pro&6Sword
+    - golden_apple:1 32
+  tools:
+    delay: 0
+    helmet: ''
+    chestplate: ''
+    leggings: ''
+    boots: ''
+    inventory:
+    - stone_sword 1 durability:1
+    - stone_pickaxe 1
+    - stone_axe 1
+    - stone_shovel 1
+    - bread 8
+  nothing00:
+    delay: 30
+    helmet: skull owner:Nothing00_
+    chestplate: leather_chestplate durability:1
+    leggings: leather_leggings durability:1
+    boots: leather_boots durability:1
+    inventory:
+    - 'kit: tools'
+    - 'cmd: broadcast &6&l{player} has got a Nothing00 kit!'
+    - golden_apple:1 64

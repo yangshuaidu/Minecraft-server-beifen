@@ -1,0 +1,28 @@
+Warps:
+  萌酱的家:
+    x: 1844.9782501253937
+    y: 64.0
+    z: 145.2265428048885
+    yaw: 297.11353
+    pitch: 14.400016
+    world: world
+    hidden: false
+    icon: TORCH:5
+  出生地_沼泽:
+    x: 1502.4831824840578
+    y: 66.875
+    z: 159.48812203339756
+    yaw: 331.76807
+    pitch: 42.75013
+    world: world
+    hidden: false
+    icon: SLIME_BALL
+  空中别墅:
+    x: 1967.1851711925835
+    y: 129.0
+    z: 83.42074134402309
+    yaw: -199.66602
+    pitch: 30.449932
+    world: world
+    hidden: false
+    icon: BOW

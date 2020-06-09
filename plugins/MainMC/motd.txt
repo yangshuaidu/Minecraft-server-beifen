@@ -1,0 +1,6 @@
+&7欢迎来到萌酱的世界 &e{player}
+&7输入 &e/help &7 获取帮助列表
+&7输入 &e/list &7 查看在线玩家
+&7今天是  &e{day}/{month}/{year} &7现在时间 &e{time}
+&7在这个服务器有 &e{onlineplayers} &7玩家在线:
+&7{listallplayers}

@@ -1,0 +1,19 @@
+&6|--------------------INFO COMMANDS--------------------|
+&6<<<<<<<<<<<<<<<<第一页-------------共二页>>>>>>>>>>>>>>>>
+&1TPA: &6/tpa <玩家>. 询问玩家是否可以传送给他们.
+&1ME:&6/me 状态
+&1TPPOS: &6/tppos <x> <y> <z> 坐标传送
+&1LIST: &6/list 显示在线玩家
+&1MSG: &6//msg <玩家> <message> 私聊
+&1REPLY: &6/reply <message> 回复私聊
+&1IGNORE: &6/back 返回前一个地点
+&1IGNORE: &6/tpaccept 接受传送请
+&1IGNORE: &6/tpdeny 拒绝传送请求
+&1SPAWN: &6/spawn. 回到出生点
+&1WARP: &6/warp <warp>. 传送到指定位置
+&1AFK: &6/afk. 将您的状态设置为 AFK
+&1HELPSTAFF: &6/helpstaff <message>. 请求在线玩家的帮助。
+&1IGNORE: &6/igonre <玩家>. 忽略该玩家
+&1MAIL: &6/mail <read/clear/send>.  阅读你的电子邮件
+&1SUICIDE: &6/suicide. 自杀。
+
